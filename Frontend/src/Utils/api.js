@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5776/api' });
+const API = axios.create({ baseURL: "https://hotelmanagement-backend-msbf.onrender.com/api" });
 
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
