@@ -11,7 +11,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5776;
 
-app.use(cors({ origin: 'http://localhost:5173', methods: ['GET', 'POST', 'PUT', 'DELETE'], credentials: true }));
+app.use(cors({ 
+  origin: ['http://localhost:5173', 'https://hotel-management-frontend-blush.vercel.app'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  credentials: true 
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
